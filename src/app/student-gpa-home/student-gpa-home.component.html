@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row" style="margin-left: 5px" >
+  <a routerLink = "" class = "col-sm-1 home-button text-center" style="background-color: inherite" >
+   <button class = "btn col-sm-1 home-button text-center" > Home </button>
+  </a>
+  <a routerLink = "about" class = "col-sm-1 home-button text-center" style="background-color: inherite" >
+    <button class = "btn col-sm-1 home-button text-center" > About </button>
+  </a>
+</div>
+<div style="text-align:center col-xl-8 jumbotron">
+    <h1 class="title container text-center">Csc Student gpa Calculator</h1>
+    <div style="margin-top: 200px" class="container text-center">
+      <form class="form-inline" >
+        <input id="searchStudent" keyup = "" value = "" #searchStudent (keyup) = "displayMatch( searchStudent.value )" type="text" class="form-control" placeholder="Search Student" >
+        <button type="button" class="btn btn-primary" style="height: 50px; font-size: 22px">Search</button>
+      </form>
+    </div>
+   <div class="container text-center" style="align-self: baseline"> 
+    <div>
+      <div class="matchStudent" *ngFor = "let match of getBestMatch()">
+        <p><a (click) = "setSelectedStudent( match )" routerLink = "student-page" a>{{ match.name }}</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div>
+    <!--<router-outlet></router-outlet> -->
+  </div>
+  

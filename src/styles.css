@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import './bootstrap-3.3.7-dist/css/bootstrap.min.css';
+
+body
+{
+    font-family: Comic sans MS;
+    height: 100%;
+    font-size: 22px;
+}
+
+.title
+{
+    font-family: Comic sans MS;
+    height: 150px;
+    background-color: teal;
+    color: white;
+}
+#searchStudent
+{
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    color: teal;
+    
+}
+
+.student
+{
+    margin-top: 50px;
+    height: 150px;
+    background-color: teal;
+}

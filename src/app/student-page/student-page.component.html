@@ -1,0 +1,49 @@
+<html>
+  <body>
+      <div class="container background-div">
+          <div class="row" style="margin-left: 5px" >
+                <a routerLink = "" class = "col-sm-1 home-button text-center" style="background-color: inherite" >
+                 <button class = "btn col-sm-1 home-button text-center" > Home </button>
+                </a>
+                <a routerLink = "/about" class = "col-sm-1 home-button text-center" style="background-color: inherite" >
+                  <button class = "btn col-sm-1 home-button text-center" > About </button>
+                </a>
+          </div>
+        <div class="container foeground-div jumbotron ">
+          <h3> {{ getSelectedStudent().getName() }} </h3>
+          <h4> Department of {{ getSelectedStudent().getDepartment() }}  level {{ getSelectedStudent().getLevel() }}</h4>
+          <!-- <ul class="pagination pagination-lg" >
+              <li><a href="#">semester 1</a></li>
+              <li><a href="#">semester 2</a></li>
+              <li><a href="#">semester 3</a></li>
+              <li><a href="#">semester 4</a></li>
+              <li><a href="#">semester 5</a></li>
+              <li><a href="#">semester 6</a></li>
+            </ul> -->
+          <h2 class="text-center"> GPA: {{ getSelectedStudent().calculateGpa() }}</h2>
+         
+          <table class = "table table-striped">
+            <thead>
+              <th>Course Name</th>
+              <th>Course Code</th>
+              <th>Credit value</th>
+              <th>CA mark2</th>
+              <th>Exam mark</th>
+              <th>Grade</th>
+            </thead>
+            <tbody>
+              <tr *ngFor = "let course of getSelectedStudent().getCourses()" >
+                <td> {{ course.getName() }} </td>
+                <td class="text-center" > {{ course.getCode() }} </td>
+                <td class="text-center" > {{ course.getCv() }} </td>
+                <td><input [(ngModel)] = course.ca class="text-center" type= "text" value='{{ course.getCa() }}'> </td>
+                <td><input [(ngModel)] = course.mark class="text-center" type= "text" value='{{ course.getMark() }}'></td>
+                <td class="text-center" > {{ course.getGradeLetter() }} </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+  </body>
+    
+</html>

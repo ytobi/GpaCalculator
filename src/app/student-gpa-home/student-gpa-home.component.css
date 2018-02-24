@@ -1,0 +1,33 @@
+
+.matchStudent
+{
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px;
+    background-color: teal;
+    color: white;
+    font-size: inherit * 2;
+    
+}
+a
+{
+    color: white;
+}
+.title
+{
+    font-size: 70px;
+    padding: 1%;
+}
+.home-button
+{
+    width: inherit;
+    height: inherit;
+    color: teal;
+    margin: 5px;
+    font-size: 20px;
+}
+.home-button:hover
+{
+    background-color: white;
+}
